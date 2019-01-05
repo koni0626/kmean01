@@ -47,7 +47,7 @@ if __name__ == '__main__':
         
     data, file_list = load_image(input_dir)
     print("学習を開始します(cluster={})".format(div_num))
-    model = cluster.KMeans(n_clusters=div_num)
+    model = cluster.KMeans(n_clusters=div_num, verbose=1)
     model.fit(data)
     print("学習を終了しました")
     labels = model.labels_
